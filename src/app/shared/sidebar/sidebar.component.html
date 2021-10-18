@@ -1,0 +1,30 @@
+
+
+<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark">
+  <a href="/" class=" align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+
+    <span class="fs-2">Giphy App</span>
+  </a>
+  <hr>
+  <ul class="nav nav-pills flex-column ">
+    <li class="nav-item ">
+      <a  class="bg-dark py-3 lh-tight" aria-current="true">
+        <div class=" w-100  justify-content-between">
+          <p class="mb-1 fs-5 text-light">Last Searched:</p>
+
+        </div>
+      </a>
+    </li>
+    <li class="nav-item ">
+      <a href="#" *ngFor="let gif of searchRecord" class="list-group-item list-group-item-action bg-dark py-3 lh-tight "
+      (click) ="search(gif)"
+      aria-current="true">
+        <div class=" w-100  justify-content-between">
+          <strong class="mb-1 text-light">{{gif |titlecase}}</strong>
+        </div>
+      </a>
+    </li>
+  </ul>
+
+
+</div>
